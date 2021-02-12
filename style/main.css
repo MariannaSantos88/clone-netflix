@@ -1,0 +1,229 @@
+:root{
+    --vermelho:#e50914;
+    --preta:#141414;
+}
+
+* { /* padrao para se ajustar em qualquer navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color:white;
+}
+
+header .container{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between; 
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'arial black', times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:#AAA ;
+    margin-right: 10px;
+}
+
+
+header nav a:hover{
+    color:#fff;
+}
+
+
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-house.jpg');
+
+    height: 470px;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
+/* Página Principal */
+.vitrine{
+    width: 100%;
+    height: 100vh;
+	 position: absolute; 
+    background: url('/img/login.jpg') center;
+}
+a{
+     color: #fff;/* muda a cor do texto */
+    text-decoration: none;/*retira o traço que fica a baixo*/
+}
+
+.showcase-content{
+    position: relative;
+	width: 65%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 200px;
+}
+
+.showcase-content h1 {
+	font-weight: 600;
+	font-size: 70px;
+	line-height: 50px;
+	margin: 10px;
+}
+
+.showcase-content p {
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 300;
+	font-size: 30px;/*tamanho do texto*/
+	line-height: 2;/*distancia do texo de cima*/
+	margin: 10px;
+}
+
+/* button */
+
+.botao-login{
+    display: flex;
+	background: #e50914; /*cor caixa*/
+	color: #fff;/*cor texto*/
+	padding: 10px;
+	font-size: 15px;/*tamanho total dele*/
+	text-align: center;/*posição do texto*/
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 5px;
+    margin-right: 10px;/*trouxe para o lado esquerdo*/
+}
+
+.botao-pag-principal{
+    font-size: 20px;
+	padding: 15px;
+	text-transform: uppercase;
+    background: #e50914;
+}
+
+.botao-pag-principal:hover {
+	opacity: 0.7;
+}
+
+.titulo-carrosel{
+    margin-left: 30px;
+}
+
+/* imagem outras abas */
+
+.serie{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-serie.jpg');
+
+    height: 470px;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.documentario{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-documentario.jpg');
+
+    height: 470px;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+/* media */
+
+@media screen and (max-width:700px){
+    header .container{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+
+}
+
+
+@media screen and (min-width:1000px){
+    .descricao{
+        width: 50%;
+    }
+
+}
